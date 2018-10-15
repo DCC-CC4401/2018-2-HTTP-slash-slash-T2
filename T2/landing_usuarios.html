@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<title>Sistema de coevaluaciones</title>
+	<style>	
+		html, body{
+			height: 100%;
+		}
+
+		nav{
+			z-index: 500;
+		}
+
+		#menu-cursos{
+			width: 15rem;
+			position: absolute;
+			z-index: 400;
+			left: -15rem;
+			transition: left 0.1s;
+		}
+		
+		@media (min-width: 768px){
+			#menu-cursos{
+				position: static;
+			}
+		}
+
+		#menu-cursos.active{
+			left: 0;
+		}
+
+		#input-buscar{
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		#btn-buscar{
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		
+	</style>
+</head>
+<body>
+	<nav class="navbar shadow-sm justify-content-start">
+		<button id="menu-btn" type="button" class="d-md-none btn btn-link p-0 mr-3"><i class="fas fa-bars h5"></i></button>
+		<span class="navbar-brand h1 mr-auto mb-md-0">Sistema De Coevaluaciones</span>
+		<a href="" class="h5 mr-4 mb-0 d-none d-md-block">Juanito Perez</a>
+		<a href="" class="h5 mb-0 text-muted d-none d-md-block">Cerrar sesión</a>
+	</nav>
+
+	<div class="row no-gutters p-0 h-100">
+		<div id="menu-cursos" class="h-100 bg-light shadow-sm">
+			<a href="" class="h4 mt-4 d-block d-md-none mb-4 pl-3 text-muted">Juanito Perez</a>
+			<h5 class="my-2 pl-3 text-muted">Cursos</h5>
+			<div class="list-group list-group-flush">
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software 1</h6>
+					<small><i class="fas fa-chalkboard-teacher mr-1"></i> CC44101-1</small>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software 2</h6>
+					<small><i class="fas fa-chalkboard-teacher mr-1"></i> CC44102-1</small>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software 3</h6>
+					<small><i class="fas fa-user-graduate mr-1"></i> CC44103-1</small>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software N</h6>
+					<small><i class="fas fa-user-graduate mr-1"></i> CC4410N-1</small>
+				</a>
+			</div>
+			<h5 class="mt-4 mb-2 pl-3 text-muted">Opciones</h5>
+			<div class="list-group list-group-flush">
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Buscar alumno</h6>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Nueva coevaluación</h6>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Nuevo curso</h6>
+				</a>
+				<a href="" class="list-group-item list-group-item-action d-md-none">
+					<h6 class="mb-0">Cerrar sesión</h6>
+				</a>
+			</div>
+		</div>
+
+		<div class="col">
+			<h3 class="container my-4 text-center">Últimas coevaluaciones</h3>
+			<ul class="container">
+				<li class="card shadow-sm my-3">
+					<div class="card-body row no-gutters align-items-center justify-content-md-between">
+						<span class="mx-2">Inicio: 14-09-2018</span>
+						<span class="mx-2">Fin: 20-09-2018</span>
+						<span class="card-title mb-0 mx-2">Ingeniería de Software 1</span>
+						<span class="mx-2">CC44101-1</span>
+						<span class="mx-2 text-success">Contestada</span>
+						<span class="mx-2 text-primary">Abierta</span>
+					</div>
+				</li>
+				<li class="card shadow-sm my-3">
+					<div class="card-body row no-gutters align-items-center justify-content-md-between">
+						<span class="mx-2">Inicio: 5-09-2018</span>
+						<span class="mx-2">Fin: 10-09-2018</span>
+						<span class="card-title mb-0 mx-2">Ingeniería de Software 1</span>
+						<span class="mx-2">CC44101-1</span>
+						<span class="mx-2 text-danger">No contestada</span>
+						<span class="mx-2 text-primary">Cerrada</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script>	
+		document.getElementById('menu-btn').addEventListener('click', ()=>{
+			document.getElementById('menu-cursos').classList.toggle('active');
+		});
+	</script>
+
+</body>
+</html>

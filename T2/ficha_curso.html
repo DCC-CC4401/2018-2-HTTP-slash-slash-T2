@@ -94,25 +94,28 @@
 
 		<div class="col">
 			<h3 class="container my-4 text-center">CC4401-1 Ingeniería de Software 2018, Primavera</h3>
+			
 			<div class="container">
-				<ul class="nav nav-tabs">
-					<li class="nav-item">
-				    	<a class="nav-link active" href="#1" data-toggle="tab">Integrantes</a>
-				  	</li>
-				  	<li class="nav-item">
-				    	<a class="nav-link" href="#2" data-toggle="tab">Equipos de Trabajo</a>
-				  	</li>
-				  	<li class="nav-item">
-				    	<a class="nav-link" href="#3" data-toggle="tab">Coevaluaciones</a>
-				  	</li>
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					  <li class="nav-item">
+					    	<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Integrantes</a>
+					  </li>
+					  <li class="nav-item">
+					    	<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Equipos de Trabajo</a>
+					  </li>
+					  <li class="nav-item">
+					   		<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Coevaluaciones</a>
+					  </li>
 				</ul>
-				<div class="tab-content ">
-					<div class="tab-pane active" id="1">
-				        <table class="table table-sm">
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<table class="table table-sm">
+							<br>
 							  <thead>
 							    <tr>
 							      <th scope="col">Nº</th>
 							      <th scope="col">Nombre</th>
+							      <th scope="col">Rol</th>
 							      <th scope="col">Editar</th>
 							    </tr>
 							  </thead>
@@ -120,30 +123,38 @@
 							    <tr>
 							      <th scope="row">1</th>
 							      <td>José Berrocal</td>
-							      <td></td>
+							      <td>Estudiante</td>
+							      <td>
+							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i></button>	
+							      </td>
 							    </tr>
 							    <tr>
 							      <th scope="row">2</th>
 							      <td>Bárbara Castro</td>
-							      <td></td>
+							      <td>Estudiante</td>
+							      <td>
+							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i></button>	
+							      </td>
 							    </tr>
 							    <tr>
 							      <th scope="row">3</th>
 							      <td>José Vergara</td>
-							      <td></td>
+							      <td>Estudiante</td>
+							      <td>
+							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i></button>	
+							      </td>
 							    </tr>
 							  </tbody>
-						</table>	
+						</table>
+					<button type="button" class="btn btn-primary">Agregar Integrante</button>
 					</div>
-					<td></td>
-					<div class="tab-pane" id="2">
-	         			 
-					</div>
-	    			<div class="tab-pane" id="3">
-	     				 <h3>add clearfix to tab-content (see the css)</h3>
-					</div>
-					</div>
+					<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">abs
 
+					</div>
+					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">.cd
+
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

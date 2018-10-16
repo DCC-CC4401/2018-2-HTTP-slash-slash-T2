@@ -7,43 +7,33 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<title>Sistema de Coevaluaciones</title>
 	<style>	
-		html, body{
-			height: 100%;
-		}
+	html, body{
+		height: 100%;
+	}
 
-		nav{
-			z-index: 500;
-		}
+	nav{
+		z-index: 500;
+	}
 
+	#menu-cursos{
+		width: 15rem;
+		position: absolute;
+		z-index: 400;
+		left: -15rem;
+		transition: left 0.1s;
+	}
+
+	@media (min-width: 768px){
 		#menu-cursos{
-			width: 15rem;
-			position: absolute;
-			z-index: 400;
-			left: -15rem;
-			transition: left 0.1s;
+			position: static;
 		}
-		
-		@media (min-width: 768px){
-			#menu-cursos{
-				position: static;
-			}
-		}
+	}
 
-		#menu-cursos.active{
-			left: 0;
-		}
+	#menu-cursos.active{
+		left: 0;
+	}
 
-		#input-buscar{
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-		}
-
-		#btn-buscar{
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-		}
-		
-	</style>
+</style>
 </head>
 <body>
 	<nav class="navbar shadow-sm justify-content-start">
@@ -88,252 +78,257 @@
 		<div class="col">
 			<h3 class="container my-4 text-center">CC4401-1 Ingeniería de Software 2018, Primavera</h3>
 			
-			<div class="container">
+			<div class="container mb-4">
 				<ul class="nav nav-tabs" id="myTab" role="tablist">
-					  <li class="nav-item">
-					    	<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Integrantes</a>
-					  </li>
-					  <li class="nav-item">
-					    	<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Equipos de Trabajo</a>
-					  </li>
-					  <li class="nav-item">
-					   		<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Coevaluaciones</a>
-					  </li>
+					<li class="nav-item">
+						<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Integrantes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Equipos de Trabajo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Coevaluaciones</a>
+					</li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
 					<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 						<table class="table table-sm">
 							<br>
-							  <thead class="thead-light">
-							    <tr>
-							      <th scope="col">Nº</th>
-							      <th scope="col">Nombre</th>
-							      <th scope="col">Rol</th>
-							      <th scope="col" mx-auto>Opciones</th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <th scope="row">1</th>
-							      <td>Sylvester Stallone</td>
-							      <td>Profesor</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
-							      </td>
-							    </tr>
-							    <tr>
-							      <th scope="row">2</th>
-							      <td>Jason Statham</td>
-							      <td>Auxiliar</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
-							      </td>
-							    </tr>
-							    <tr>
-							      <th scope="row">3</th>
-							      <td>Jet Li</td>
-							      <td>Ayudante</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
-							      </td>
-							    </tr>
-							    <tr>
-							      <th scope="row">4</th>
-							      <td>Dolph Lundgren</td>
-							      <td>Alumno</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
-							      </td>
-							    </tr>
-							    <tr>
-							      <th scope="row">5</th>
-							      <td>Randy Couture</td>
-							      <td>Alumno</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
-							      </td>
-							    </tr>
-							    <tr>
-							      <th scope="row">6</th>
-							      <td>Terry Crews</td>
-							      <td>Alumno</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>	
-							      </td>
-							    </tr>
-							  </tbody>
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">Nº</th>
+									<th scope="col">Nombre</th>
+									<th scope="col" class="pl-4">Rol</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Sylvester Stallone</td>
+									<td>Profesor</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jason Statham</td>
+									<td>Auxiliar</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Jet Li</td>
+									<td>Ayudante</td>
+								</tr>
+							</tbody>
+						</table>
+						<button type="button" class="btn btn-primary">Agregar Equipo Docente</button>
+						<br>
+						<table class="table table-sm">
+							<br>
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">Nº</th>
+									<th scope="col">Nombre Alumno</th>
+									<th scope="col" class="text-center">Opciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Dolph Lundgren</td>
+									<td class="text-center">
+										<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>	
+										<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Randy Couture</td>
+									<td class="text-center">
+										<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>	
+										<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Terry Crews</td>
+									<td class="text-center">
+										<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>	
+										<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>	
+									</td>
+								</tr>
+							</tbody>
 						</table>
 						
-					<button type="button" class="btn btn-primary">Agregar Integrante</button>
+						<button type="button" class="btn btn-primary">Agregar Alumno</button>
 					</div>
+					<br>
 					<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-						<table class="table table-sm">
+						<div class="mb-4">
 							<br>
-
-						  <thead class="thead-light">
-						    <tr>
-						      <th scope="col">Equipo Nº1</th>
-						      <th scope="col"><button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>
-						<button type="button" class="btn btn-secondary"><i class="fas fa-bars"></i> Historial</button></th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <th scope="row">Nombre:</th>
-						      <td>"HTTP"</td>
-						    </tr>
-						  <thead class="thead-light">
-						    <tr>
-						      <th scope="col">Nº</th>
-						      <th scope="col">Integrantes</th>
-						    </tr>
-						  </thead>
-						    <tr>
-						      <th scope="row">1</th>
-						      <td>Jet Li</td>
-						    </tr>
-						    <tr>
-						      <th scope="row">2</th>
-						      <td>Dolph Lundgren</td> 
-						    </tr>
-						    <tr>
-						      <th scope="row">3</th>
-						      <td>Jason Statham</td>
-						    </tr>
-						  </tbody>
-						</table>
-						<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>
-						<button type="button" class="btn btn-secondary"><i class="fas fa-bars"></i> Historial</button>
-
-						<br>
-						<table class="table table-sm">
-							<br>
-						  <thead class="thead-light">
-						    <tr>
-						      <th scope="col">Nº</th>
-						      <th scope="col">Nombre</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <th scope="row">2</th>
-						      <td>"Checho"</td>
-						    </tr>
-						  <thead class="thead-light">
-						    <tr>
-						      <th scope="col">Nº</th>
-						      <th scope="col">Integrantes</th>
-						    </tr>
-						  </thead>
-						    <tr>
-						      <th scope="row">1</th>
-						      <td>Jet Li</td>
-						    </tr>
-						    <tr>
-						      <th scope="row">2</th>
-						      <td>Dolph Lundgren</td> 
-						    </tr>
-						    <tr>
-						      <th scope="row">3</th>
-						      <td>Jason Statham</td>
-						    </tr>
-						  </tbody>
-						</table>
-						<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>
-						<button type="button" class="btn btn-secondary"><i class="fas fa-bars"></i> Historial</button>
-						<br>
-						<table class="table table-sm">
-							<br>
-						  <thead class="thead-light">
-						    <tr>
-						      <th scope="col">Nº</th>
-						      <th scope="col">Nombre</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <th scope="row">3</th>
-						      <td>"Not Checho"</td>
-						    </tr>
-						  <thead class="thead-light">
-						    <tr>
-						      <th scope="col">Nº</th>
-						      <th scope="col">Integrantes</th>
-						    </tr>
-						  </thead>
-						    <tr>
-						      <th scope="row">1</th>
-						      <td>Jet Li</td>
-						    </tr>
-						    <tr>
-						      <th scope="row">2</th>
-						      <td>Dolph Lundgren</td> 
-						    </tr>
-						    <tr>
-						      <th scope="row">3</th>
-						      <td>Jason Statham</td>
-						    </tr>
-						  </tbody>
-						</table>
-						<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>
-						<button type="button" class="btn btn-secondary"><i class="fas fa-bars"></i> Historial</button>
+							<table class="table table-sm">
+								<br>
+								<thead class="thead-light">
+									<tr>
+										<th scope="col">Nº</th>
+										<th scope="col">Nombre</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>"HTTP, slash, slash"</td>
+									</tr>
+									<thead class="thead-light">
+										<tr>
+											<th scope="col">Nº</th>
+											<th scope="col">Integrantes</th>
+										</tr>
+									</thead>
+									<tr>
+										<th scope="row">1</th>
+										<td>Jet Li</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Dolph Lundgren</td> 
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Jason Statham</td>
+									</tr>
+								</tbody>
+							</table>
+							<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>
+							<button type="button" class="btn btn-secondary"><i class="fas fa-bars"></i> Historial</button>
+						</div>
 						
-						<br>
+						<div class="mb-4">
+							<br>
+							<table class="table table-sm">
+								<br>
+								<thead class="thead-light">
+									<tr>
+										<th scope="col">Nº</th>
+										<th scope="col">Nombre</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">2</th>
+										<td>"Checho"</td>
+									</tr>
+									<thead class="thead-light">
+										<tr>
+											<th scope="col">Nº</th>
+											<th scope="col">Integrantes</th>
+										</tr>
+									</thead>
+									<tr>
+										<th scope="row">1</th>
+										<td>Jet Li</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Dolph Lundgren</td> 
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Jason Statham</td>
+									</tr>
+								</tbody>
+							</table>
+							<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>
+							<button type="button" class="btn btn-secondary"><i class="fas fa-bars"></i> Historial</button>
+						</div>
+
+						<div class="mb-4">
+							<br>
+							<table class="table table-sm">
+								<br>
+								<thead class="thead-light">
+									<tr>
+										<th scope="col">Nº</th>
+										<th scope="col">Nombre</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">3</th>
+										<td>"Not Checho"</td>
+									</tr>
+									<thead class="thead-light">
+										<tr>
+											<th scope="col">Nº</th>
+											<th scope="col">Integrantes</th>
+										</tr>
+									</thead>
+									<tr>
+										<th scope="row">1</th>
+										<td>Jet Li</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Dolph Lundgren</td> 
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Jason Statham</td>
+									</tr>
+								</tbody>
+							</table>
+							<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>
+							<button type="button" class="btn btn-secondary"><i class="fas fa-bars"></i> Historial</button>
+						</div>
 					</div>
+
+
 					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 						<table class="table table-sm">
 							<br>
-							  <thead class="thead-light">
-							    <tr>
-							      <th scope="col">Nº</th>
-							      <th scope="col">Título</th>
-							      <th scope="col">Fecha Inicio</th>
-							      <th scope="col">Fecha Fin</th>
-							      <th scope="col">Opciones</th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <th scope="row">1</th>
-							      <td>Coevaluación I</td>
-							      <td>01/12/2012</td>
-							      <td>12/12/2012</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-secondary"><i class="far fa-file-export"></i> Exportar</button>
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
-							      </td>
-							    </tr>
-							    <tr>
-							      <th scope="row">2</th>
-							      <td>Coevaluación II</td>
-							      <td>11/11/2011</td>
-							      <td>21/11/2011</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-secondary"><i class="far fa-file-export"></i> Exportar</button>
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>	
-							      </td>
-							    </tr>
-							    <tr>
-							      <th scope="row">3</th>
-							      <td>Coevaluación III</td>
-							      <td>14/03/2000</td>
-							      <td>13/03/2005</td>
-							      <td>
-							      	<button type="button" class="btn btn-light"><i class="far fa-edit"></i> Editar</button>	
-							      	<button type="button" class="btn btn-secondary"><i class="far fa-file-export"></i> Exportar</button>
-							      	<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
-							      </td>
-							    </tr>
-							    
-							  </tbody>
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">Nº</th>
+									<th scope="col">Título</th>
+									<th scope="col">Fecha Inicio</th>
+									<th scope="col">Fecha Fin</th>
+									<th scope="col" class="text-center">Opciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Coevaluación I</td>
+									<td>01/12/2012</td>
+									<td>12/12/2012</td>
+									<td class="text-center">
+										<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>	
+										<button type="button" class="btn btn-secondary mr-2"><i class="far fa-file-export"></i> Exportar</button>
+										<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Coevaluación II</td>
+									<td>11/11/2011</td>
+									<td>21/11/2011</td>
+									<td class="text-center">
+										<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>	
+										<button type="button" class="btn btn-secondary mr-2"><i class="far fa-file-export"></i> Exportar</button>
+										<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>	
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Coevaluación III</td>
+									<td>14/03/2000</td>
+									<td>13/03/2005</td>
+									<td class="text-center">
+										<button type="button" class="btn btn-light mr-2"><i class="far fa-edit"></i> Editar</button>	
+										<button type="button" class="btn btn-secondary mr-2"><i class="far fa-file-export"></i> Exportar</button>
+										<button type="button" class="btn btn-dark"><i class="fas fa-trash"></i> Eliminar</button>
+									</td>
+								</tr>
+
+							</tbody>
 						</table>
 						<button type="button" class="btn btn-primary">Resumen Coevaluaciones</button>
 					</div>

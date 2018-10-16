@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<title>Sistema de coevaluaciones</title>
+	<style>	
+		html, body{
+			height: 100%;
+		}
+
+		nav{
+			z-index: 500;
+		}
+
+		#menu-cursos{
+			width: 15rem;
+			position: absolute;
+			z-index: 400;
+			left: -15rem;
+			transition: left 0.1s;
+		}
+		
+		@media (min-width: 768px){
+			#menu-cursos{
+				position: static;
+			}
+		}
+
+		#menu-cursos.active{
+			left: 0;
+		}
+		
+	</style>
+</head>
+<body>
+	<nav class="navbar shadow-sm justify-content-start">
+		<button id="menu-btn" type="button" class="d-md-none btn btn-link p-0 mr-3"><i class="fas fa-bars h5"></i></button>
+		<span class="navbar-brand h1 mr-auto mb-md-0">Sistema De Coevaluaciones</span>
+		<a href="" class="h5 mr-4 mb-0 d-none d-md-block">Juanito Perez</a>
+		<a href="" class="h5 mb-0 text-muted d-none d-md-block">Cerrar sesión</a>
+	</nav>
+
+	<div class="row no-gutters p-0 h-100">
+		<div id="menu-cursos" class="h-100 bg-light shadow-sm">
+			<a href="" class="h4 mt-4 d-block d-md-none mb-4 pl-3 text-muted">Juanito Perez</a>
+			<h5 class="my-2 pl-3 text-muted">Cursos</h5>
+			<div class="list-group list-group-flush">
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software N</h6>
+					<small><i class="fas fa-user-graduate mr-1"></i> CC4410N-1</small>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software 3</h6>
+					<small><i class="fas fa-user-graduate mr-1"></i> CC44103-1</small>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software 2</h6>
+					<small><i class="fas fa-chalkboard-teacher mr-1"></i> CC44102-1</small>
+				</a>
+				<a href="" class="list-group-item list-group-item-action">
+					<h6 class="mb-0">Ingeniería de Software 1</h6>
+					<small><i class="fas fa-chalkboard-teacher mr-1"></i> CC44101-1</small>
+				</a>
+			</div>
+
+        </div>
+            <div class="col">
+                <div class="container">
+                    <span class="h3 d-block">Juanito Perez</span>
+                    <span class="h6 d-block">12.345.678-9</span>
+                    <span class="h6 d-block">doesnt_name@gmail.com</span>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="p-0 btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                        Modificar clave
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modificar clave</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                        <form>
+                                                <div class="form-group">
+                                                  <label for="exampleInputEmail1">Clave actual</label>
+                                                  <input type="email" class="form-control" id="oldPass" placeholder="Clave acutal">
+                                                  
+                                                </div>
+                                                <div class="form-group">
+                                                  <label for="newPass">Nueva clave</label>
+                                                  <input type="password" class="form-control" id="newPass" placeholder="Clave">
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                        <label for="exampleInputPassword1">Repetir Clave</label>
+                                                        <input type="password" class="form-control" id="newPass" placeholder="Clave">
+                                                      </div>
+                                                
+                                              </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Cambiar Clave</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="container-fluid">
+                    <table class="table  table-hover table-borderless">
+                            <thead class="thead-light">
+                                <tr>
+                             <th scope="col">Semestre</th>
+                          <th scope="col">Codigo</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Cargo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">2018-2</th>
+                          <td>CC44101</td>
+                          <td>Ingenieria de Software</td>
+                          <td>Auxiliar</td>
+                        </tr>
+                        <tr class="accordion-toggle" data-toggle="collapse" data-target="#CC4000">
+                          <th scope="row">2018-2</th>
+                          <td>CC44101</td>
+                          <td>Ingenieria de Software II</td>
+                          <td>Alumno</td>
+    
+                        </tr>
+                        <tr>
+    
+                            <td></td>
+                            <td></td>
+                            <td colspan="2">
+                                <div id="CC4000" class="collapse in">
+                                    <table class="table ">
+                      <thead>
+                        <tr>
+                          <th scope="col">Numero coevaluación</th>
+                          <th scope="col">Nota</th>
+    
+                        </tr>
+                      </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+    
+                                            <th scope="row">7.3</th>
+                                        </tr>
+                                        <tr>
+    
+                                            <th scope="row">2</th>
+    
+                                            <th scope="row">1.1</th>
+                                        </tr>
+                                        </tbody>
+    
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2017-2</th>
+                          <td>CC44101-1</td>
+                          <td>Ingenieria de Software</td>
+                          <td>Ayudante</td>
+                        </tr>
+    
+                        <tr>
+                          <th scope="row">2017-1</th>
+                          <td>CC44101-1</td>
+                          <td>Ingenieria de Software</td>
+                          <td>Ayudante</td>
+                        </tr>
+    
+                        <tr class="accordion-toggle" data-toggle="collapse" data-target="#collapseOne">
+                          <th scope="row">2016-2</th>
+                          <td>CC44101-1</td>
+                          <td>Ingenieria de Software</td>
+                          <td>Alumno</td>
+    
+                        </tr>
+                        <tr>
+    
+                            <td></td>
+                            <td></td>
+                            <td colspan="2">
+                                <div id="collapseOne" class="collapse in">
+                                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Numero coevaluación</th>
+                          <th scope="col">Nota</th>
+    
+                        </tr>
+                      </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+    
+                                            <th scope="row">7.3</th>
+                                        </tr>
+                                        <tr>
+    
+                                            <th scope="row">2</th>
+    
+                                            <th scope="row">1.1</th>
+                                        </tr>
+                                        </tbody>
+    
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+    
+                      </tbody>
+                    </table>
+                </div>
+                                        </li>
+    
+            </div>
+
+
+	<!-- Modal búsqueda estudiante -->
+	<div class="modal fade" id="modal-busqueda" tabindex="-1" role="dialog" aria-labelledby="label-modal-busqueda" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="label-modal-busqueda">Buscar estudiante</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-2 col" type="search" placeholder="Nombre o Rut" aria-label="Buscar">
+						<button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal nueva coevaluación -->
+	<div class="modal fade" id="modal-nueva-coevaluacion" tabindex="-1" role="dialog" aria-labelledby="label-modal-nueva-coevaluacion" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="label-modal-nueva-coevaluacion">Nueva coevaluación</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="form-nueva-coevaluacion" action="">
+						<div class="form-group">
+							<label>Curso</label>
+							<select class="form-control">
+								<option disabled="true" selected="true">Seleccione curso</option>
+								<option>Ingeniería de Software 1 CC44101-1</option>
+								<option>Ingeniería de Software 2 CC44102-1</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Fecha inicio</label>
+							<input id="inicio-coevaluacion" type="text" placeholder="Inicio" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Fecha término</label>
+							<input id="termino-coevaluacion" type="text" placeholder="Término" class="form-control">
+						</div>
+						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+					<button type="button" for="form-nueva-coevaluacion" class="btn btn-primary">Crear</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal nuevo curso -->
+	<div class="modal fade" id="modal-nuevo-curso" tabindex="-1" role="dialog" aria-labelledby="label-modal-nuevo-curso" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="label-modal-nuevo-curso">Nuevo curso</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="form-nuevo-curso" action="">
+						<div class="form-group">
+							<label>Código del curso</label>
+							<input type="text" placeholder="Código" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Número de sección</label>
+							<input type="number" placeholder="Sección" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Año</label>
+							<input type="number" placeholder="Año" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Semestre</label>
+							<input type="number" placeholder="Semestre" class="form-control">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+					<button type="button" for="form-nuevo-curso" class="btn btn-primary">Crear curso</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="javascript/jquery-ui.min.js"></script>
+
+	<script>	
+		document.getElementById('menu-btn').addEventListener('click', ()=>{
+			document.getElementById('menu-cursos').classList.toggle('active');
+		});
+
+		// Se define el lenguaje para el datepicker:
+		$.datepicker.regional['es'] = {
+			closeText: 'Cerrar',
+			prevText: '< Ant',
+			nextText: 'Sig >',
+			currentText: 'Hoy',
+			monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+			monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+			dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+			dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+			dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+			weekHeader: 'Sm',
+			dateFormat: 'dd/mm/yy',
+			firstDay: 1,
+			isRTL: false,
+			showMonthAfterYear: false,
+			yearSuffix: ''
+		};
+		$.datepicker.setDefaults($.datepicker.regional['es']);
+
+		$('#inicio-coevaluacion').datepicker();
+		$('#termino-coevaluacion').datepicker();
+	</script>
+
+</body>
+</html>

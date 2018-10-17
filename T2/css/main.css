@@ -1,0 +1,40 @@
+/*Colores: */
+
+.app-bg-blue-800{
+	background-color: #1565C0;
+}
+
+html, body{
+	height: 100%;
+}
+
+nav{
+	z-index: 500;
+	height: 5rem;
+}
+
+@media (min-width: 768px){
+
+	nav span.navbar-brand{
+		font-size: 2rem;
+	}
+}
+
+
+#menu-cursos{
+	width: 15rem;
+	position: absolute;
+	z-index: 400;
+	left: -15rem;
+	transition: left 0.1s;
+}
+
+@media (min-width: 768px){
+	#menu-cursos{
+		position: static;
+	}
+}
+
+#menu-cursos.active{
+	left: 0;
+}

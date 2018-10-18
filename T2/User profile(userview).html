@@ -14,14 +14,14 @@
 	<nav class="navbar navbar-dark shadow-sm justify-content-start app-bg-blue-800">
 		<button id="menu-btn" type="button" class="d-md-none btn btn-link p-0 mr-3 text-white"><i class="fas fa-bars h5"></i></button>
 		<span class="navbar-brand mr-auto mb-md-0">Sistema De Coevaluaciones</span>
-		<a href="" class="h5 mr-4 mb-0 d-none d-md-block text-white">Juanito Perez</a>
+		<a href="" class="h5 mr-4 mb-0 d-none d-md-block text-white">Marlon Brando</a>
 		<a href="" class="h5 mb-0 text-muted d-none d-md-block text-white-50">Cerrar Sesión</a>
 	</nav>
 
 
 	<div class="row no-gutters p-0 h-100">
 		<div id="menu-cursos" class="h-100 bg-light shadow-sm">
-			<a href="" class="h4 mt-4 d-block d-md-none mb-4 pl-3 text-muted">Juanito Perez</a>
+			<a href="" class="h4 mt-4 d-block d-md-none mb-4 pl-3 text-muted">Marlon Brando</a>
 			<h5 class="my-2 pl-3 text-muted">Cursos</h5>
 			<div class="list-group list-group-flush">
 				<a href="" class="list-group-item list-group-item-action">
@@ -37,165 +37,170 @@
 		</div>
 		<div class="col">
 			<div class="container">
+				<div div style="display: flex" class="pl-4 pt-3">
+					<div>
+						<i class="fas fa-5x fa-user-circle pt-4"></i>
+					</div>
 				<div class="px-3 mb-3">
-				<span class="h3 d-block mt-4">Juanito Perez</span>
-				<span class="h6 d-block">12.345.678-9</span>
-				<span class="h6 d-block">doesnt_name@gmail.com</span>
-				<!-- Button trigger modal -->
-				<button type="button" class="p-0 btn btn-link" data-toggle="modal" data-target="#modal-clave">
-					Modificar clave
-				</button>
+					<span class="h3 d-block mt-4">Marlon Brando</span>
+					<span class="h6 d-block">12.345.678-9</span>
+					<span class="h6 d-block">doesnt_name@gmail.com</span>
+					<!-- Button trigger modal -->
+					<button type="button" class="p-0 btn btn-link" data-toggle="modal" data-target="#modal-clave">
+						Modificar Clave
+					</button>
 
-				<!-- Modal modificar clave-->
-				<div class="modal fade" id="modal-clave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Modificar clave</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div class="form-group">
-										<label for="exampleInputEmail1">Clave actual</label>
-										<input type="email" class="form-control" id="oldPass" placeholder="Clave acutal">
+					<!-- Modal modificar clave-->
+					<div class="modal fade" id="modal-clave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Modificar Clave</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="form-group">
+											<label for="exampleInputEmail1">Clave Actual</label>
+											<input type="email" class="form-control" id="oldPass" placeholder="Clave Actual">
 
-									</div>
-									<div class="form-group">
-										<label for="newPass">Nueva clave</label>
-										<input type="password" class="form-control" id="newPass" placeholder="Clave">
-									</div>
+										</div>
+										<div class="form-group">
+											<label for="newPass">Nueva Clave</label>
+											<input type="password" class="form-control" id="newPass" placeholder="Clave">
+										</div>
 
-									<div class="form-group">
-										<label for="exampleInputPassword1">Repetir Clave</label>
-										<input type="password" class="form-control" id="newPass" placeholder="Clave">
-									</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1">Repetir Clave</label>
+											<input type="password" class="form-control" id="newPass" placeholder="Clave">
+										</div>
 
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Cambiar Clave</button>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+									<button type="button" class="btn btn-primary">Cambiar Clave</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="container-fluid">
-				<table class="table  table-hover table-borderless">
-					<thead class="thead-light">
-						<tr>
-							<th scope="col">Semestre</th>
-							<th scope="col">Codigo</th>
-							<th scope="col">Nombre</th>
-							<th scope="col">Cargo</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">2018-2</th>
-							<td>CC4101-1</td>
-							<td>Ingeniería de Software</td>
-							<td>Auxiliar</td>
-						</tr>
-						<tr class="accordion-toggle" data-toggle="collapse" data-target="#tabla-alumno-1">
-							<th scope="row">2018-2</th>
-							<td>CC5401-1</td>
-							<td>Ingeniería de Software II</td>
-							<td>Alumno</td>
+				</div>
+				<div class="container-fluid">
+					<table class="table  table-hover table-borderless">
+						<thead class="thead-light">
+							<tr>
+								<th scope="col">Semestre</th>
+								<th scope="col">Código</th>
+								<th scope="col">Nombre</th>
+								<th scope="col">Cargo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">2018-2</th>
+								<td>CC4101-1</td>
+								<td>Ingeniería de Software</td>
+								<td>Auxiliar</td>
+							</tr>
+							<tr class="accordion-toggle" data-toggle="collapse" data-target="#tabla-alumno-1">
+								<th scope="row">2018-2</th>
+								<td>CC5401-1</td>
+								<td>Ingeniería de Software II</td>
+								<td>Alumno</td>
 
-						</tr>
-						<tr>
+							</tr>
+							<tr>
 
-							<td class="p-0"></td>
-							<td class="p-0"></td>
-							<td colspan="2" class="p-0">
-								<div id="tabla-alumno-1" class="collapse in">
-									<table class="table mb-0">
-										<thead>
-											<tr>
-												<th scope="col">Numero coevaluación</th>
-												<th scope="col">Nota</th>
+								<td class="p-0"></td>
+								<td class="p-0"></td>
+								<td colspan="2" class="p-0">
+									<div id="tabla-alumno-1" class="collapse in">
+										<table class="table mb-0">
+											<thead>
+												<tr>
+													<th scope="col">Numero coevaluación</th>
+													<th scope="col">Nota</th>
 
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<th scope="row">#1</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">#1</th>
 
-												<th scope="row">7.0</th>
-											</tr>
-											<tr>
+													<th scope="row">7.0</th>
+												</tr>
+												<tr>
 
-												<th scope="row">#2</th>
+													<th scope="row">#2</th>
 
-												<th scope="row">4.6</th>
-											</tr>
-										</tbody>
+													<th scope="row">4.6</th>
+												</tr>
+											</tbody>
 
-									</table>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">2017-2</th>
-							<td>CC4401-1</td>
-							<td>Ingeniería de Software</td>
-							<td>Ayudante</td>
-						</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">2017-2</th>
+								<td>CC4401-1</td>
+								<td>Ingeniería de Software</td>
+								<td>Ayudante</td>
+							</tr>
 
-						<tr>
-							<th scope="row">2017-1</th>
-							<td>CC4401-1</td>
-							<td>Ingeniería de Software</td>
-							<td>Ayudante</td>
-						</tr>
+							<tr>
+								<th scope="row">2017-1</th>
+								<td>CC4401-1</td>
+								<td>Ingeniería de Software</td>
+								<td>Ayudante</td>
+							</tr>
 
-						<tr class="accordion-toggle" data-toggle="collapse" data-target="#tabla-alumno-2">
-							<th scope="row">2016-2</th>
-							<td>CC4401-1</td>
-							<td>Ingeniería de Software</td>
-							<td>Alumno</td>
+							<tr class="accordion-toggle" data-toggle="collapse" data-target="#tabla-alumno-2">
+								<th scope="row">2016-2</th>
+								<td>CC4401-1</td>
+								<td>Ingeniería de Software</td>
+								<td>Alumno</td>
 
-						</tr>
-						<tr>
+							</tr>
+							<tr>
 
-							<td class="p-0"></td>
-							<td class="p-0"></td>
-							<td colspan="2" class="p-0">
-								<div id="tabla-alumno-2" class="collapse in">
-									<table class="table mb-0">
-										<thead>
-											<tr>
-												<th scope="col">Numero coevaluación</th>
-												<th scope="col">Nota</th>
+								<td class="p-0"></td>
+								<td class="p-0"></td>
+								<td colspan="2" class="p-0">
+									<div id="tabla-alumno-2" class="collapse in">
+										<table class="table mb-0">
+											<thead>
+												<tr>
+													<th scope="col">Numero coevaluación</th>
+													<th scope="col">Nota</th>
 
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<th scope="row">#1</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">#1</th>
 
-												<th scope="row">6.8</th>
-											</tr>
-											<tr>
+													<th scope="row">6.8</th>
+												</tr>
+												<tr>
 
-												<th scope="row">#2</th>
+													<th scope="row">#2</th>
 
-												<th scope="row">6.0</th>
-											</tr>
-										</tbody>
+													<th scope="row">6.0</th>
+												</tr>
+											</tbody>
 
-									</table>
-								</div>
-							</td>
-						</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
 
-					</tbody>
-				</table>
-			</div>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</li>
 
